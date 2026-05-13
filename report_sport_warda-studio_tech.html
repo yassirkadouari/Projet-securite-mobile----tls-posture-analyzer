@@ -1,0 +1,150 @@
+
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rapport de Posture TLS - sport.warda-studio.tech</title>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #121212; color: #ffffff; margin: 0; padding: 20px; }
+            h1 { color: #00d2ff; text-align: center; }
+            .container { max-width: 900px; margin: 0 auto; background-color: #1e1e1e; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+            .section { margin-bottom: 30px; }
+            h2 { color: #3a86ff; border-bottom: 2px solid #333; padding-bottom: 10px; }
+            table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+            th, td { text-align: left; padding: 12px; border-bottom: 1px solid #333; }
+            th { background-color: #2a2a2a; color: #00d2ff; }
+            .safe { color: #06d6a0; font-weight: bold; }
+            .vuln { color: #ef476f; font-weight: bold; }
+            .warn { color: #ffd166; font-weight: bold; }
+            .footer { text-align: center; margin-top: 40px; color: #888; font-size: 14px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🛡️ Analyse de Posture TLS/Réseau</h1>
+            <p style="text-align: center; font-size: 1.2em;">Cible : <strong>sport.warda-studio.tech:443</strong></p>
+            
+            
+            <div class="section">
+                <h2>📜 Informations sur le Certificat</h2>
+                <table>
+                    <tr><th>Champ</th><th>Valeur</th></tr>
+                    <tr><td>Sujet</td><td>CN=warda-studio.tech</td></tr>
+                    <tr><td>Émetteur</td><td>CN=WE1,O=Google Trust Services,C=US</td></tr>
+                    <tr><td>Valide à partir de</td><td>2026-03-30 02:04:27+00:00</td></tr>
+                    <tr><td>Date d'expiration</td><td>2026-06-28 03:03:07+00:00</td></tr>
+                </table>
+            </div>
+            
+
+            <div class="section">
+                <h2>🔒 Protocoles Supportés</h2>
+                <table>
+                    <tr><th>Protocole</th><th>Statut</th><th>Évaluation</th></tr>
+                    
+                    <tr>
+                        <td>SSL 2.0</td>
+                        <td>❌ Rejeté</td>
+                        <td>
+                            
+                                <span class="safe">Sécurisé</span>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>SSL 3.0</td>
+                        <td>❌ Rejeté</td>
+                        <td>
+                            
+                                <span class="safe">Sécurisé</span>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>TLS 1.0</td>
+                        <td>✅ Supporté</td>
+                        <td>
+                            
+                                <span class="vuln">Insecure</span>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>TLS 1.1</td>
+                        <td>✅ Supporté</td>
+                        <td>
+                            
+                                <span class="vuln">Insecure</span>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>TLS 1.2</td>
+                        <td>✅ Supporté</td>
+                        <td>
+                            
+                                <span class="safe">Sécurisé</span>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>TLS 1.3</td>
+                        <td>✅ Supporté</td>
+                        <td>
+                            
+                                <span class="safe">Sécurisé</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>⚠️ Vulnérabilités Connues</h2>
+                <table>
+                    <tr><th>Vulnérabilité</th><th>Statut</th></tr>
+                    
+                    <tr>
+                        <td>Heartbleed</td>
+                        <td>
+                            
+                                <span class="safe">Sécurisé ✅</span>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ROBOT</td>
+                        <td>
+                            
+                                <span class="safe">Sécurisé ✅</span>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>OpenSSL CCS Injection</td>
+                        <td>
+                            
+                                <span class="safe">Sécurisé ✅</span>
+                            
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+            
+            <div class="footer">
+                Projet de Sécurité Mobile - NETWORK/TLS Posture Analyser
+            </div>
+        </div>
+    </body>
+    </html>
+    

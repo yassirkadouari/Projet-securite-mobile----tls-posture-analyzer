@@ -1,0 +1,28 @@
+GET /api/v1/user/profile HTTP/1.1
+Host: api.production-app.com
+User-Agent: MyApp/1.0 (Android 11)
+Accept: application/json
+
+POST /track/event HTTP/1.1
+Host: www.google-analytics.com
+Content-Type: application/json
+Content-Length: 42
+
+{"event":"login", "user_id":"12345"}
+
+GET /dev/debug/info HTTP/1.1
+Host: staging.production-app.com
+Authorization: Bearer test-token
+
+POST /upload/telemetry HTTP/1.1
+Host: 185.34.21.99
+Content-Type: application/x-www-form-urlencoded
+
+data=base64encryptedPayload
+
+GET /update/check HTTP/1.1
+Host: update.suspect-domain.ru
+Accept: */*
+
+GET /ads/banner HTTP/1.1
+Host: graph.facebook.com
