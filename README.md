@@ -1,4 +1,4 @@
-# 🛡️ Network/TLS Posture Analyzer
+# Network/TLS Posture Analyzer
 
 **Module :** Sécurité Mobile / Sécurité Web  
 **Année Universitaire :** 2023-2024  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📖 Description du Projet
+## Description du Projet
 Ce projet est un **outil d'audit défensif du transport** spécialement conçu pour analyser la posture de sécurité des applications mobiles. Plutôt que de se focaliser sur des méthodes de contournement (offensives), notre outil propose une approche Blue Team complète :
 1. **Analyse Statique (APK) :** Extraction du fichier `network_security_config.xml` pour détecter si le trafic en clair est autorisé (`cleartextTrafficPermitted`) et si le *Certificate Pinning* est appliqué.
 2. **Analyse Dynamique (Proxy Logs) :** Extraction automatique d'Endpoints (URLs, domaines) depuis des fichiers logs bruts (Burp Suite, Wireshark).
@@ -15,14 +15,14 @@ Ce projet est un **outil d'audit défensif du transport** spécialement conçu p
 
 ---
 
-## ⚙️ Architecture Technique
+## Architecture Technique
 L'application repose sur une architecture découplée (Frontend/Backend) :
 *   **Backend (Python / FastAPI) :** Gère l'analyse lourde des APK (via `pyaxmlparser`), des logs, le moteur de classification et les scans réseau (`sslyze`).
 *   **Frontend (React / Vite) :** Interface utilisateur moderne (Design System *Glassmorphism* & *Dark Mode*) avec support du Drag & Drop et génération de rapports PDF (`html2pdf.js`).
 
 ---
 
-## 🚀 Instructions d'Installation et Lancement
+## Instructions d'Installation et Lancement
 
 L'application nécessite l'exécution simultanée du Backend et du Frontend.
 
