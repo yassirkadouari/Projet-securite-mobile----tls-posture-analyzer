@@ -51,3 +51,13 @@ frontend/yarn-error.log*
 
 # Docker
 .dockerignore
+
+# Media & Reports
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.pdf
+*.tex
+report_*.html
+!*.mp4
